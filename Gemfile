@@ -13,7 +13,7 @@ group :test do
   gem 'capybara-screenshot', '~> 1.0'
   gem 'database_cleaner', '~> 1.3'
   gem 'email_spec'
-  gem 'factory_girl_rails', '~> 4.7'
+  gem 'factory_bot_rails', '~> 5.2'
   gem 'launchy'
   gem 'rspec-activemodel-mocks', '~> 1.0'
   gem 'rspec-collection_matchers'
@@ -26,7 +26,7 @@ group :test do
   gem 'timecop'
   gem 'with_model'
   gem 'mutant-rspec', '~> 0.8'
-  gem 'shoulda-matchers', '~> 3.1'
+  gem 'shoulda-matchers', '~> 4.3'
   gem 'shoulda-callback-matchers', '~> 1.1'
   gem 'rails-controller-testing'
 end
@@ -36,6 +36,7 @@ group :test, :development do
   gem 'pry-byebug'
 end
 
-gem 'spree', '~> 3.3.0'
+# gem 'spree', '~> 3.3.0'
+gem 'spree', '~> 4.1'
 
 gemspec
