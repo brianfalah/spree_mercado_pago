@@ -36,7 +36,6 @@ group :test, :development do
   gem 'pry-byebug'
 end
 
-# gem 'spree', '~> 3.3.0'
 gem 'spree', '~> 4.1'
 
 gemspec
