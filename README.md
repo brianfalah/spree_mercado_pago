@@ -1,8 +1,8 @@
 # Spree mercado pago
 
-This project is compatible with Spree 3.3.0 and Rails 5
+This project is compatible with Spree 4.1 and Rails 6
 ```
-gem 'spree_mercado_pago', '~> 3.3.0', git: "https://github.com/lucasruroken/spree_mercado_pago"
+gem 'spree_mercado_pago', '~> 4.1.0', git: "https://github.com/lucasruroken/spree_mercado_pago"
 ```
 
 You should run inside your project
