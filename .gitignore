@@ -9,3 +9,4 @@ spec/dummy
 *.gem
 .idea
 VersionFile
+.ruby-version
