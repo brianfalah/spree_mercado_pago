@@ -11,4 +11,4 @@ bundle exec rails g spree_mercado_pago:install
 ```
 ### Usage
 * Add a new payment method in the admin panel of type "Spree::MercadoPago::Gateways::CreditCard" and "Spree::MercadoPago::Gateways::Ticket"
-* After adding the payment method you will be able to configure your Client ID and Client Secret (provided by Mercado Pago).
+* After adding the payment method you will be able to configure your Client Secret (provided by Mercado Pago) in your encrypted secrets files.
