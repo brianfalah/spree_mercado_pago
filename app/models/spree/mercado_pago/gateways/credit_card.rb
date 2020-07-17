@@ -44,12 +44,18 @@ class Spree::MercadoPago::Gateways::CreditCard < Spree::Gateway
 
     result = provider.post("/v1/payments", data)
 
-    if result["status"] == "201" && result["response"]["id"].present? && result["response"]["status"] == "approved"
+    if result["status"] == "201" && result["response"]["id"].present? && status_approved?(result)
       express_checkout.update({gateway_object_id: result["response"]["id"], data: result["response"], email: gateway_options[:email]})
       ::Spree::MercadoPago::Status::Success.new
     else
       ::Spree::MercadoPago::Status::Error.new(result["response"])
     end
+  end
+
+  # treat 'in_process' status as approved, otherwise the user will get an error and the payment
+  # could get approved later
+  def status_approved?(result)
+    ['approved', 'in_process'].include?(result["response"]["status"])
   end
 
   def parse_installments(installments)
